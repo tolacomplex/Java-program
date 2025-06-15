@@ -43,7 +43,6 @@ public class App {
     // function update number 
     static void updateNumber(int uNumber) {
         Scanner input = new Scanner(System.in);
-        int number;
         boolean updated = false;
         for (int i = 0; i < count; i++) {
             if (numbers[i] == uNumber) {
