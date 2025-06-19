@@ -1,11 +1,14 @@
+
 public class Address {
+
     String city;
     String country;
+
     Address(String city, String country) {
         this.city = city;
         this.country = country;
     }
-    
+
     public String getCity() {
         return city;
     }
@@ -22,15 +25,9 @@ public class Address {
         this.country = country;
     }
 
-    void displayAddress() {
-        System.out.println(", " + city + ", " + country);
-    }
-
     @Override
     public String toString() {
         return "Address [city=" + city + ", country=" + country + "]";
     }
-    
+
 }
-
-

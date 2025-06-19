@@ -20,11 +20,12 @@ public class Person {
     }
 
     public int getEmployee(String msg) {
-        Scanner scanner = new Scanner(System.in);
-        int number;
-        System.out.print(msg);
-        number = scanner.nextInt();
-        return number;
+        try (Scanner scanner = new Scanner(System.in)) {
+            int number;
+            System.out.print(msg);
+            number = scanner.nextInt();
+            return number;
+        }
     }
 
     // Mothod add employee
@@ -41,12 +42,13 @@ public class Person {
 // Method update infomation
 
     public void updateEmployee(int uNumber) {
-        Scanner input = new Scanner(System.in);
-        for (int i = 0; i < count; i++) {
-            if (numbers[i] == uNumber) {
-                System.out.print("Enter New number: ");
-                numbers[i] = input.nextInt();
+        try (Scanner input = new Scanner(System.in)) {
+            for (int i = 0; i < count; i++) {
+                if (numbers[i] == uNumber) {
+                    System.out.print("Enter New number: ");
+                    numbers[i] = input.nextInt();
 
+                }
             }
         }
     }

@@ -21,6 +21,14 @@ public class PartTimeEmployee extends Employee {
         this.rates = rates;
     }
 
+    public void setRates(double rates) {
+        this.rates = rates;
+    }
+
+    public void setHours(double hours) {
+        this.hours = hours;
+    }
+
     public double getHours() {
         return hours;
     }

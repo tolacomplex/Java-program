@@ -10,16 +10,16 @@ public class Task_2 {
 
     // New acoount of user
     static String name_2 = "Hong";
-    static String AccountNumber_2 = "09887664";
     static double balance_2;
     static int pin_2;
 
     static double getMessage(String msg) {
-        Scanner input = new Scanner(System.in);
-        double number;
-        System.out.print(msg);
-        number = input.nextDouble();
-        return number;
+        try (Scanner input = new Scanner(System.in)) {
+            double number;
+            System.out.print(msg);
+            number = input.nextDouble();
+            return number;
+        }
     }
 
     static void authorizePin(int pin1) {
@@ -81,71 +81,80 @@ public class Task_2 {
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        double amount;
-        int newPin, oldPin;
-        do {
-            System.out.println("Hello, " + name);
-            System.out.println("1. Deposite");
-            System.out.println("2. Withdrawal");
-            System.out.println("3. Transfer");
-            System.out.println("4. Check balance");
-            System.out.println("5. Change PIN");
-            System.out.println("6. Exit ");
-            System.out.print("\nChoice Option: ");
-            int number_1 = scanner.nextInt();
-            switch (number_1) {
-                case 1 -> {
-                    System.out.print("Enter PIN: ");
-                    int pin1 = scanner.nextInt();
-                    authorizePin(pin1);
-                    amount = getMessage("Deposite amound: ");
-                    deposite(amount);
-                    break;
-                }
-                case 2 -> {
-                    System.out.print("Enter PIN: ");
-                    int pin1 = scanner.nextInt();
-                    authorizePin(pin1);
-                    amount = getMessage("Withdrawal amount: ");
-                    withDrawal(amount);
-                    break;
-                }
-                case 3 -> {
-                    System.out.print("Enter PIN: ");
-                    int pin1 = scanner.nextInt();
-                    authorizePin(pin1);
-                    amount = getMessage("Transfer amount: ");
-                    transfer(amount);
-                    break;
-                }
-                case 4 -> {
-                    System.out.print("Enter PIN: ");
-                    int pin1 = scanner.nextInt();
-                    authorizePin(pin1);
-                    viewProfile(name, AccountNumber);
-                    checkBalance();
-                    break;
-                }
+        try (Scanner scanner = new Scanner(System.in)) {
+            double amount;
+            int newPin, oldPin;
+            do {
+                System.out.println("Hello, " + name);
+                System.out.println("1. Deposite");
+                System.out.println("2. Withdrawal");
+                System.out.println("3. Transfer");
+                System.out.println("4. Check balance");
+                System.out.println("5. Change PIN");
+                System.out.println("6. Exit ");
+                System.out.print("\nChoice Option: ");
+                int number_1 = scanner.nextInt();
+                switch (number_1) {
+                    case 1 -> {
+                        System.out.print("Enter PIN: ");
+                        int pin1 = scanner.nextInt();
+                        authorizePin(pin1);
+                        amount = getMessage("Deposite amound: ");
+                        deposite(amount);
+                        break;
+                    }
+                    case 2 -> {
+                        System.out.print("Enter PIN: ");
+                        int pin1 = scanner.nextInt();
+                        authorizePin(pin1);
+                        amount = getMessage("Withdrawal amount: ");
+                        withDrawal(amount);
+                        break;
+                    }
+                    case 3 -> {
+                        System.out.print("Enter PIN: ");
+                        int pin1 = scanner.nextInt();
+                        authorizePin(pin1);
+                        amount = getMessage("Transfer amount: ");
+                        transfer(amount);
+                        break;
+                    }
+                    case 4 -> {
+                        System.out.print("Enter PIN: ");
+                        int pin1 = scanner.nextInt();
+                        authorizePin(pin1);
+                        viewProfile(name, AccountNumber);
+                        checkBalance();
+                        break;
+                    }
 
-                case 5 -> {
-                    System.out.print("Enter Old PIN: ");
-                    oldPin = scanner.nextInt();
-                    System.out.print("Enter New PIN: ");
-                    newPin = scanner.nextInt();
-                    changePin(oldPin, newPin);
-                    break;
-                }
-                case 6 -> {
-                    System.exit(0);
-                    System.out.println("Exit Succesfully");
-                    break;
-                }
-                default -> {
-                    System.out.println("Invalid");
-                }
+                    case 5 -> {
+                        System.out.print("Enter Old PIN: ");
+                        oldPin = scanner.nextInt();
+                        System.out.print("Enter New PIN: ");
+                        newPin = scanner.nextInt();
+                        changePin(oldPin, newPin);
+                        break;
+                    }
+                    case 6 -> {
+                        System.exit(0);
+                        System.out.println("Exit Succesfully");
+                        break;
+                    }
+                    default -> {
+                        System.out.println("Invalid");
+                    }
 
-            }
-        } while (true);
+                }
+            } while (true);
+        }
+    }
+
+    public static int getPin_2() {
+        return pin_2;
+    }
+
+    public static void setPin_2(int pin_2) {
+        Task_2.pin_2 = pin_2;
     }
 }
