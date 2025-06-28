@@ -7,7 +7,6 @@ public class App {
         Person p = new Person();
         try (Scanner scanner = new Scanner(System.in)) {
             int choice;
-
             do {
                 System.out.println("Menu Employee");
                 System.out.println("1. Add Employee");
@@ -22,7 +21,7 @@ public class App {
                 switch (choice) {
                     case 1:
                         p.showEmployee("Add Employee");
-                        int number = p.getEmployee("Enter number: ");
+                        int number = p.getEmployee("Enter Number: ");
                         p.addEmployee(number);
                         break;
                     case 2:

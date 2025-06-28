@@ -3,7 +3,7 @@ public class Person {
 
     private String name = null;
 
-    public Person(String name) {
+    public Person(String string) {
       this.name = name;
     }
 
@@ -13,6 +13,10 @@ public class Person {
 
     public String getName() {
         return name;
+    }
+
+    public void showEmployee(String string) {
+      throw new UnsupportedOperationException("Unimplemented method 'showEmployee'");
     }
 
 

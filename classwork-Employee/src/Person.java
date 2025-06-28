@@ -4,6 +4,11 @@ import java.util.Scanner;
 public class Person {
 
     public final int SIZE = 100;
+    public Person(int[] numbers, int count) {
+        this.numbers = numbers;
+        this.count = count;
+    }
+
     public int[] numbers = new int[SIZE];
     public int count = 0;
 

@@ -1,7 +1,7 @@
 
 public class Instrutor extends Person {
 
-    private  double salary;
+    protected double salary;
 
     public Instrutor(String name) {
         super(name);
