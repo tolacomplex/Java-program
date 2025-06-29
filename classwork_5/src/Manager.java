@@ -8,7 +8,6 @@ class Manager extends Employee {
     }
 
     public Manager(String name, int id, double bonus) {
-        super(name, id);
         this.bonus = bonus;
     }
 
@@ -16,8 +15,7 @@ class Manager extends Employee {
     public double calculateSalary() {
         return bonus;
     }
-
-    @Override
+    
     public void showDetail() {
         System.out.println("Bonus: $" + bonus);
     }

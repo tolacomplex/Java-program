@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class App {
 
     public static void main(String[] args) throws Exception {
-        Person p = new Person();
+        Person p = new Person(null, 0);
         try (Scanner scanner = new Scanner(System.in)) {
             int choice;
             do {

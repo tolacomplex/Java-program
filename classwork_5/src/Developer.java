@@ -10,7 +10,6 @@ public class Developer extends Employee {
     }
 
     public Developer(String name, int id, int hoursWorked, double hourslyRate) {
-        super(name, id);
         this.hoursWorked = hoursWorked;
         this.hourslyRate = hourslyRate;
     }
@@ -21,7 +20,6 @@ public class Developer extends Employee {
         return hoursWorked * hourslyRate;
     }
 
-    @Override
     public void showDetail() {
         System.out.println("Hours worked: " + hoursWorked);
         System.out.println("Hoursly Rate: $" + hourslyRate);
