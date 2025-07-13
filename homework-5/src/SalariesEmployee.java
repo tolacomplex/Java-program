@@ -1,24 +1,25 @@
 
-public class SalariesEmployee extends Employee {
+public abstract class SalariesEmployee extends Employee {
 
-    protected int anualSalaries;
+    private int annaulSalary;
 
-    public SalariesEmployee(int anualSalaries) {
-        this.anualSalaries = anualSalaries;
+    public int getAnnaulSalary() {
+        return annaulSalary;
+    }
+
+    public void setAnnaulSalary(int annaulSalary) {
+        this.annaulSalary = annaulSalary;
+    }
+
+    public SalariesEmployee(String name, int hireYear, int annaulSalary) {
+        super(name, hireYear);
+        this.annaulSalary = annaulSalary;
     }
 
     @Override
-    void monthlyPay() {
+    public double mothlyPay() {
 
-      throw new UnsupportedOperationException("Unimplemented method 'monthlyPay'");
+        return annaulSalary / 12;
     }
 
-    @Override
-    void anualPay() {
-
-      throw new UnsupportedOperationException("Unimplemented method 'anualPay'");
-    }
-
-
-  
 }

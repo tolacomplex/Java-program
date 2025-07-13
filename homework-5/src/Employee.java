@@ -4,8 +4,29 @@ public abstract class Employee {
     protected String name;
     protected int hireYear;
 
-    abstract void monthlyPay();
+    public Employee(String name, int hireYear) {
+        this.name = name;
+        this.hireYear = hireYear;
+    }
 
-    abstract void anualPay();
+    public abstract double mothlyPay();
+
+    public abstract double annaulPay();
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getHireYear() {
+        return hireYear;
+    }
+
+    public void setHireYear(int hireYear) {
+        this.hireYear = hireYear;
+    }
 
 }
