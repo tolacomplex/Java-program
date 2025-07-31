@@ -9,12 +9,7 @@ class Employee {
     private int id;
     private String name;
     private String position;
-
-    public Employee(int id, String name, String position) {
-        this.id = id;
-        this.name = name;
-        this.position = position;
-    }
+    
 
     public int getId() {
         return id;
@@ -35,6 +30,12 @@ class Employee {
     public void setPosition(String position) {
         this.position = position;
     }
+
+    public void displayInfo() {
+      // TODO Auto-generated method stub
+      throw new UnsupportedOperationException("Unimplemented method 'displayInfo'");
+    }
+
 }
 
 public class EmployeeManagementApp extends JFrame {
@@ -152,7 +153,7 @@ public class EmployeeManagementApp extends JFrame {
                 }
             }
 
-            employees.add(new Employee(id, name, position));
+            employees.add(new Employee());
             refreshTable();
             clearFields();
         } catch (NumberFormatException e) {
