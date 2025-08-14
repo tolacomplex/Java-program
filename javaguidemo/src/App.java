@@ -1,3 +1,4 @@
+
 import com.formdev.flatlaf.FlatLightLaf;
 
 import javax.swing.*;
@@ -5,6 +6,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 
 public class App {
+
     public static void main(String[] args) {
         try {
             UIManager.setLookAndFeel(new FlatLightLaf());
@@ -42,4 +44,3 @@ public class App {
         });
     }
 }
-
